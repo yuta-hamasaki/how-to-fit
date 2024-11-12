@@ -21,7 +21,7 @@
 - **Edit:** `PUT /posts/1`
 - **Add:** `POST /posts`
 - **Delete:** `DELETE /posts/1`
-
+---
 - **Register** `POST /users/register`
 - **Login** `POST /users/login`
 
