@@ -1,16 +1,15 @@
-// pages/Login.tsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LoginFormData {
-  email: string;
+  username: string;
   password: string;
 }
 
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<LoginFormData>({
-    email: '',
+    username: '',
     password: '',
   });
   const [error, setError] = useState<string>('');
@@ -30,8 +29,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      // Replace with your actual login API endpoint
-      const response = await fetch('/api/login', {
+      const response = await fetch('/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,13 +41,10 @@ const Login = () => {
         throw new Error('Login failed');
       }
 
-      // Handle successful login
       const data = await response.json();
-      // Store token or user data in localStorage/context
-      localStorage.setItem('token', data.token);
+      // localStorage.setItem('token', data.token);
       
-      // Redirect to home page or dashboard
-      navigate('/');
+      navigate('/home');
     } catch (err) {
       setError('Invalid email or password');
     } finally {
@@ -75,18 +70,18 @@ const Login = () => {
           
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label htmlFor="email" className="sr-only">
-                Email address
+              <label htmlFor="username" className="sr-only">
+                username
               </label>
               <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
+                id="username"
+                name="username"
+                type="username"
+                autoComplete="username"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-                value={formData.email}
+                placeholder="Username"
+                value={formData.username}
                 onChange={handleChange}
               />
             </div>

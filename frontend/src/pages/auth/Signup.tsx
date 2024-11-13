@@ -1,4 +1,3 @@
-// pages/Signup.tsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -56,7 +55,7 @@ const Signup = () => {
 
     try {
       // Replace with your actual signup API endpoint
-      const response = await fetch('/api/signup', {
+      const response = await fetch('/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,12 +72,10 @@ const Signup = () => {
         throw new Error('Signup failed');
       }
 
-      // Handle successful signup
       const data = await response.json();
       // Store token or user data
-      localStorage.setItem('token', data.token);
+      // localStorage.setItem('token', data.token);
       
-      // Redirect to login page
       navigate('/login');
     } catch (err) {
       setError('Faild creating account:( Try again.');
