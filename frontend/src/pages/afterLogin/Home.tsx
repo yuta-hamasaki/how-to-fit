@@ -1,8 +1,10 @@
-import React from 'react'
+import React ,{useState, useEffect}from 'react'
 import Card from '../../components/cards'
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 type Category = "Chest"| "Back"| "Abs"| "Legs"| "Others"
-interface CardProps {
+interface Menu {
   id:string;
   title?: string;
   describe?: string;
@@ -16,49 +18,41 @@ interface CardProps {
   variant?:'bordered' | 'elevated';
 }
 
+
+
 const Home = () => {
+const [data, setData] = useState<Menu[]>()
+
+useEffect(()=>{
+  const getData = async()=>{
+    try{
+      const res = await axios.get('api/menus/')
+      return setData(res.data)
+    }catch(err){
+      console.error(err)
+    }
+  }
+  getData()
+})
   return (
     <section className="">
       <div className='p-10 w-full flex justify-center items-center bg-green-50'>
         <h1 className="text-3xl">Welcome to <span className='font-bold text-5xl'>HowToFit<span className='text-red-500 text-8xl'>.</span></span></h1>
       </div>
       <div className='p-10 w-full flex justify-center items-center space-x-3 space-y-3 flex-wrap'>
-        <Card
-        id={"nfsjdnfjk"}
-        title={"hello title"}
-        describe={"kdfnlsdjnliknjgilsujnviu"}
-        image={"https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-        variant={'elevated'}
-        />
-                <Card
-                id={"nfsjdnfjk"}
-        title={"hello title"}
-        describe={"kdfnlsdjnliknjgilsujnviu"}
-        image={"https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-        variant={'elevated'}
-        />
+      {data?.map((item) => (
+        <Link to={`${item.id}`}>
+            <Card
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              describe={item.describe}
+              image={item.image}
+              variant={item.variant || 'elevated'}
+            />
+          </Link>
+        ))}
 
-<Card
-id={"nfsjdnfjk"}
-        title={"hello title"}
-        describe={"kdfnlsdjnliknjgilsujnviu"}
-        image={"https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-        variant={'elevated'}
-        />
-                <Card
-                id={"nfsjdnfjk"}
-        title={"hello title"}
-        describe={"kdfnlsdjnliknjgilsujnviu"}
-        image={"https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-        variant={'elevated'}
-        />
-                <Card
-                id={"nfsjdnfjk"}
-        title={"hello title"}
-        describe={"kdfnlsdjnliknjgilsujnviu"}
-        image={"https://images.unsplash.com/photo-1721332153282-3be1f363074d?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-        variant={'elevated'}
-        />
       </div>
   
     </section>
