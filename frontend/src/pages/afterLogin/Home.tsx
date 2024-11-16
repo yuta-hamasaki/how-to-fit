@@ -1,7 +1,7 @@
 import React ,{useState, useEffect}from 'react'
 import Card from '../../components/cards'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 type Category = "Chest"| "Back"| "Abs"| "Legs"| "Others"
 interface Menu {
