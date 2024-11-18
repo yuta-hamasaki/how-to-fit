@@ -37,11 +37,10 @@ const Home = () => {
       }
     };
     getData();
-  }, []); // 依存配列を追加して無限ループを防ぐ
+  }, []); 
 
   return (
     <main className="min-h-screen bg-white">
-      {/* ヒーローセクション */}
       <section className="relative overflow-hidden bg-gradient-to-r from-green-50 to-green-100">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-white/40" />

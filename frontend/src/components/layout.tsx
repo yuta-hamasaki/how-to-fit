@@ -4,7 +4,6 @@ import { LogOut, Menu, X } from 'lucide-react';
 import axios from 'axios';
 
 const Layout = () => {
-  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
@@ -41,10 +40,9 @@ const Layout = () => {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo/Home Link */}
             <div className="flex-shrink-0">
-              <Link to="/" className="text-xl font-bold text-orange-500">
-                HowToFit.
+              <Link to="/" className="text-xl font-bold">
+                HowToFit <span className='text-orange-500'>.</span>
               </Link>
             </div>
 
@@ -91,7 +89,6 @@ const Layout = () => {
               )}
             </nav>
 
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -106,7 +103,6 @@ const Layout = () => {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

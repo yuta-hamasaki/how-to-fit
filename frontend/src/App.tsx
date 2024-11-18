@@ -14,7 +14,7 @@ function App() {
                 <span className="text-orange-500"> for you!</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 max-w-[700px] mx-auto">
-                HowToFit - Your personal fitness journey starts here. Discover curated workout videos tailored to your goals.
+                HowToFit. - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
             </div>
             
@@ -23,7 +23,7 @@ function App() {
                 to="/signup" 
                 className="w-full md:w-auto"
               >
-                <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-full font-semibold text-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded-full font-semibold text-lg transition-colors duration-200 ">
                   Get Started
                 </button>
               </Link>
@@ -44,11 +44,10 @@ function App() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose HowToFit?
+              What is HowToFit?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              トレーニング動画を簡単に見つけ、効果的なワークアウトを始めましょう。
-              あなたの目標達成をサポートする機能が揃っています。
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
           </div>
 
@@ -58,10 +57,10 @@ function App() {
                 <PlayCircle className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Selected Videos
+                Text Text
               </h3>
               <p className="text-gray-600">
-                厳選されたYouTubeトレーニング動画で、効果的なワークアウトを見つけることができます。初心者から上級者まで、あなたのレベルに合わせた動画をご用意しています。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
             </div>
 
@@ -70,10 +69,10 @@ function App() {
                 <Users className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Community Support
+              Blah blahhh
               </h3>
               <p className="text-gray-600">
-                同じ目標を持つユーザーとつながり、モチベーションを高めましょう。経験豊富なトレーナーのアドバイスも受けられます。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -81,10 +80,10 @@ function App() {
                 <Dumbbell className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Diverse Workouts
+                Text Text
               </h3>
               <p className="text-gray-600">
-                筋トレ、ヨガ、有酸素運動など、様々なトレーニングメニューをご用意。あなたの好みや目的に合わせて選択できます。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               </p>
             </div>
           </div>
@@ -94,7 +93,7 @@ function App() {
       <section className="bg-orange-500 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Ready to start your fitness journey?
+            Ready to start?
           </h2>
           <Link to="/signup">
             <button className="bg-white text-orange-500 py-3 px-8 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
