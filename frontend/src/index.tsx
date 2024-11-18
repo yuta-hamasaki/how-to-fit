@@ -68,8 +68,6 @@ root.render(
         </ProtectedRoute>
       }/>
     <Route path="/post" element={<Post />} />
-
-
       <Route path="*" element={<NotFound />} />
   </Route>
 </Routes>
