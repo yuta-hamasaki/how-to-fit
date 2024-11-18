@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-gradient-to-r from-green-50 to-green-100">
+      <section className="relative overflow-hidden  bg-gradient-to-b from-orange-50 to-white">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-white/40" />
         </div>
