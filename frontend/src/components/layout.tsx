@@ -42,7 +42,7 @@ const Layout = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <Link to="/" className="text-xl font-bold">
-                HowToFit <span className='text-orange-500'>.</span>
+                HowToFit<span className='text-orange-500'>.</span>
               </Link>
             </div>
 
