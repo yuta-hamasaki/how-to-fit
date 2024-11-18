@@ -56,7 +56,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="max-w-2xl mx-auto text-xl text-gray-600">
-              Discover the perfect workout routines tailored just for you
+              Discover good workout videos :)
             </p>
           </div>
         </div>
