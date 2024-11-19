@@ -53,6 +53,23 @@ const Detail = () => {
     getData();
   }, [id]);
 
+
+  const handleDelete = async () => {
+    try {
+      const res = await fetch(`/api/menus/${id}`, {
+        method: "DELETE",
+      });
+      
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      
+      
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   if (loading) {
     return (
       <div className="container mx-auto px-4 max-w-4xl py-8 space-y-6">
@@ -128,6 +145,10 @@ const Detail = () => {
           )}
         </div>
       </div>
+      <button 
+      className="bg-red-500 text-white py-3 px-6 rounded-md"
+    onClick={handleDelete}
+    >Delete</button>
     </div>
   );
 };
