@@ -77,6 +77,12 @@ const loginUser = async (req: Request<{}, {}, User>, res: Response) => {
   res.status(200).json({ message: 'Login authenticated' })
 }
 
+const logoutUser = (req: Request, res: Response) => {
+  res.clearCookie('isAuthenticated');
+  res.clearCookie('userId');
+  res.status(200).json({ message: 'Logged out successfully' });
+};
+
 // Check auth profile
 const userProfile = (req: Request, res: Response) => {
   res.status(200).send('You are allowed to view the page')
@@ -89,5 +95,6 @@ export default {
   updateUserById,
   deleteUserById,
   loginUser,
+  logoutUser,
   userProfile
 }

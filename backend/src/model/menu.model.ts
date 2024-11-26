@@ -2,7 +2,24 @@ import { v4 as uuidv4 } from 'uuid'
 import { Menu } from "../types/menu"
 
 class MenuModel {
-  private menus:Menu[] = []
+  private menus:Menu[] = [
+    {
+      id: "foasjf",
+      title:"Chest workout",
+      describe:"Effective wayt to train your chest",
+      image: "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "BTxPU2AhHfU?si=mAWUSqZLYjQouHYx",
+      category:"Chest"
+    },
+    {
+      id: "kjsnsknfsknfk",
+      title:"Leg workout",
+      describe:"Effective wayt to train your legs",
+      image: "https://images.unsplash.com/photo-1541600383005-565c949cf777?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      url: "H6mRkx1x77k?si=ShQQqolHR3KLDR7E",
+      category:"Legs"
+    }
+  ]
 
   // Get all users
   findAll(): Menu[] {
